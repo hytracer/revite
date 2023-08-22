@@ -10,7 +10,7 @@
         "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
         "fmt": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
         "typecheck": "tsc --noEmit",
-        "start": "sirv dist --cors --single --host",
+        "start": "sirv dist --cors --single --host --port 80",
         "start:inject": "node scripts/inject.js && sirv dist_injected --cors --single --host"
     },
     "eslintConfig": {

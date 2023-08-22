@@ -79,25 +79,16 @@ export default observer(({ server }: Props) => {
             }}>
             <div className="container">
                 {server.flags && server.flags & 1 ? (
-                    <Tooltip
-                        content={
-                            <Text id="app.special.server-badges.official" />
-                        }
-                        placement={"bottom-start"}>
+                    <Tooltip content="redpilled" placement={"bottom-start"}>
                         <svg width="20" height="20">
                             <image
-                                xlinkHref="/assets/badges/verified.svg"
+                                xlinkHref="https://cdn.discordapp.com/emojis/1022186805723930715.gif?size=128&quality=lossless"
                                 height="20"
                                 width="20"
-                            />
-                            <image
-                                xlinkHref="/assets/badges/revolt_r.svg"
-                                height="15"
-                                width="15"
                                 x="2"
                                 y="3"
                                 style={
-                                    "justify-content: center; align-items: center; filter: brightness(0);"
+                                    "justify-content: center; align-items: center;"
                                 }
                             />
                         </svg>
@@ -111,7 +102,7 @@ export default observer(({ server }: Props) => {
                         placement={"bottom-start"}>
                         <svg width="20" height="20">
                             <image
-                                xlinkHref="/assets/badges/verified.svg"
+                                xlinkHref="/assets/badges/star.png"
                                 height="20"
                                 width="20"
                             />

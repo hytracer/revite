@@ -51,7 +51,17 @@ export default function UserBadges({ badges, uid }: Props) {
                 )}
                 {badges & Badges.Developer ? (
                     <Tooltip content={<Text id="app.navigation.tabs.dev" />}>
-                        <img src="/assets/badges/developer.svg" />
+                        <img src="/assets/badges/own.png" />
+                    </Tooltip>
+                ) : (
+                    <></>
+                )}
+                {badges & Badges.PlatformModeration ? (
+                    <Tooltip
+                        content={
+                            <Text id="app.special.popovers.user_profile.badges.moderation" />
+                        }>
+                        <img src="/assets/badges/mod.png" />
                     </Tooltip>
                 ) : (
                     <></>
@@ -78,21 +88,8 @@ export default function UserBadges({ badges, uid }: Props) {
                     <></>
                 )}
                 {badges & Badges.EarlyAdopter ? (
-                    <Tooltip
-                        content={
-                            <Text id="app.special.popovers.user_profile.badges.early_adopter" />
-                        }>
-                        <img src="/assets/badges/early_adopter.svg" />
-                    </Tooltip>
-                ) : (
-                    <></>
-                )}
-                {badges & Badges.PlatformModeration ? (
-                    <Tooltip
-                        content={
-                            <Text id="app.special.popovers.user_profile.badges.moderation" />
-                        }>
-                        <img src="/assets/badges/moderation.svg" />
+                    <Tooltip content="Active user">
+                        <img src="/assets/badges/star.png" />
                     </Tooltip>
                 ) : (
                     <></>
@@ -143,8 +140,8 @@ export default function UserBadges({ badges, uid }: Props) {
                     <></>
                 )}
                 {badges & Badges.Paw ? (
-                    <Tooltip content="🦊">
-                        <img src="/assets/badges/paw.svg" />
+                    <Tooltip content="🍼">
+                        <img src="https://cdn.discordapp.com/emojis/1142077606339018842.gif?size=128&quality=lossless" />
                     </Tooltip>
                 ) : (
                     <></>

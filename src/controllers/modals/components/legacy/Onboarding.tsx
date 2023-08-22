@@ -6,7 +6,7 @@ import { useState } from "preact/hooks";
 
 import { Button, Preloader } from "@revoltchat/ui";
 
-// import wideSVG from "/assets/wide.svg";
+// import wideSVG from "/assets/logo.png";
 import background from "./assets/onboarding_background.svg";
 
 import FormField from "../../../../pages/login/FormField";

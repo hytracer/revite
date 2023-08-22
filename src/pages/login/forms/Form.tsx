@@ -235,7 +235,7 @@ export const Form = observer(({ page, callback }: Props) => {
             {page === "login" && (
                 <>
                     <span className={styles.create}>
-                        <Text id="login.new" />{" "}
+                        {"Need an account? "}
                         <Link to="/login/create">
                             <Text id="login.create" />
                         </Link>
@@ -246,29 +246,6 @@ export const Form = observer(({ page, callback }: Props) => {
                             <Text id="login.reset" />
                         </Link>
                     </span>
-                    <span className={styles.create}>
-                        <Text id="login.missing_verification" />{" "}
-                        <Link to="/login/resend">
-                            <Text id="login.resend" />
-                        </Link>
-                    </span>
-                    {!IS_REVOLT && (
-                        <>
-                            <br />
-                            <Tip palette="primary">
-                                <span>
-                                    <Text id="login.unofficial_instance" />{" "}
-                                    <a
-                                        href="https://developers.revolt.chat/faq/instances#what-is-a-third-party-instance"
-                                        style={{ color: "var(--accent)" }}
-                                        target="_blank"
-                                        rel="noreferrer">
-                                        <Text id="general.learn_more" />
-                                    </a>
-                                </span>
-                            </Tip>
-                        </>
-                    )}
                 </>
             )}
             {(page === "reset" ||

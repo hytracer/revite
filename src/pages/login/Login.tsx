@@ -1,4 +1,4 @@
-import { Twitter, Github, Mastodon } from "@styled-icons/boxicons-logos";
+import { Firefox } from "@styled-icons/boxicons-logos";
 import { observer } from "mobx-react-lite";
 import { Helmet } from "react-helmet";
 import { Link, Route, Switch } from "react-router-dom";
@@ -6,9 +6,11 @@ import { Link, Route, Switch } from "react-router-dom";
 import styles from "./Login.module.scss";
 import { Text } from "preact-i18n";
 
+import { Tip } from "@revoltchat/ui";
+
 import { useApplicationState } from "../../mobx/State";
 
-import wideSVG from "/assets/wide.svg";
+import wideSVG from "/assets/logo.png";
 
 import LocaleSelector from "../../components/common/LocaleSelector";
 import { Titlebar } from "../../components/native/Titlebar";
@@ -98,54 +100,26 @@ export default observer(() => {
                         <div className={styles.links}>
                             <div className={styles.socials}>
                                 <a
-                                    href="https://github.com/revoltchat"
+                                    href="https://moon.rip"
                                     target="_blank"
                                     rel="noreferrer">
-                                    <Github size={24} />
-                                </a>
-                                <a
-                                    href="https://twitter.com/revoltchat"
-                                    target="_blank"
-                                    rel="noreferrer">
-                                    <Twitter size={24} />
-                                </a>
-                                <a
-                                    href="https://mastodon.social/@revoltchat"
-                                    target="_blank"
-                                    rel="noreferrer">
-                                    <Mastodon size={24} />
-                                </a>
-                            </div>
-                            <div className={styles.bullet} />
-                            <div className={styles.revolt}>
-                                <a
-                                    href="https://revolt.chat/about"
-                                    target="_blank"
-                                    rel="noreferrer">
-                                    <Text id="general.about" />
-                                </a>
-                                <a
-                                    href="https://revolt.chat/terms"
-                                    target="_blank"
-                                    rel="noreferrer">
-                                    <Text id="general.tos" />
-                                </a>
-                                <a
-                                    href="https://revolt.chat/privacy"
-                                    target="_blank"
-                                    rel="noreferrer">
-                                    <Text id="general.privacy" />
+                                    <Firefox size={24} />
                                 </a>
                             </div>
                         </div>
-                        <a
-                            className={styles.attribution}
-                            href="https://unsplash.com/@fakurian"
-                            target="_blank"
-                            rel="noreferrer">
-                            <Text id="general.image_by" /> &lrm;@fakurian &rlm;·
-                            unsplash.com
-                        </a>
+                        <br />
+                        <Tip palette="primary">
+                            <span>
+                                {"Third-party Revolt Fork. "}
+                                <a
+                                    href="https://developers.revolt.chat/faq/instances#what-is-a-third-party-instance"
+                                    style={{ color: "var(--accent)" }}
+                                    target="_blank"
+                                    rel="noreferrer">
+                                    <Text id="general.learn_more" />
+                                </a>
+                            </span>
+                        </Tip>
                     </div>
                 </div>
             </div>
